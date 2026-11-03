@@ -4,4 +4,6 @@ import com.ibm.emp_mangmnt.entity.Employee;
 
 public interface EmployeService {
     Employee saveEmployee(Employee employee);
+
+    Employee getEmployeeById(Long id);
 }
