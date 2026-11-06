@@ -1,6 +1,7 @@
 package com.ibm.emp_mangmnt.controller;
 
 import com.ibm.emp_mangmnt.entity.Employee;
+import com.ibm.emp_mangmnt.model.EmployeeDTO;
 import com.ibm.emp_mangmnt.service.EmployeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +16,14 @@ public class EmployeController {
 //CRUD
 
     @PostMapping("/save")
-    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
-        Employee savedEmployee = employeService.saveEmployee(employee);
+    public ResponseEntity<EmployeeDTO> saveEmployee(@RequestBody EmployeeDTO employee) {
+        EmployeeDTO savedEmployee = employeService.saveEmployee(employee);
 
         return ResponseEntity.ok(savedEmployee);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
-        Employee employee = employeService.getEmployeeById(id);
+    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
+        EmployeeDTO employee = employeService.getEmployeeById(id);
         return ResponseEntity.ok(employee);
     }
 
