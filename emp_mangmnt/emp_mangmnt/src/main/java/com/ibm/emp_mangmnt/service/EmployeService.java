@@ -1,9 +1,10 @@
 package com.ibm.emp_mangmnt.service;
 
 import com.ibm.emp_mangmnt.entity.Employee;
+import com.ibm.emp_mangmnt.model.EmployeeDTO;
 
 public interface EmployeService {
-    Employee saveEmployee(Employee employee);
+    EmployeeDTO saveEmployee(EmployeeDTO employee);
 
-    Employee getEmployeeById(Long id);
+    EmployeeDTO getEmployeeById(Long id);
 }
