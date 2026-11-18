@@ -10,7 +10,7 @@ public class EmployeeDTO {
      private String name;
     @Digits(integer = 2, fraction = 0, message = "Age must be a valid number with up to 2 digits")
     private int age;
-    private String department;
+    private DepartmentDTO department;
 
     public String getName() {
         return name;
@@ -28,11 +28,11 @@ public class EmployeeDTO {
         this.age = age;
     }
 
-    public String getDepartment() {
+    public DepartmentDTO getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(DepartmentDTO department) {
         this.department = department;
     }
 }
